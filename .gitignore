@@ -53,3 +53,8 @@ fabric.properties
 
 .idea/*
 .idea/**
+
+
+target/
+target/*
+target/**
