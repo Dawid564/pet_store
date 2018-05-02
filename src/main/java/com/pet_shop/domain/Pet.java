@@ -17,9 +17,10 @@ public class Pet {
     @JoinColumn(name = "species", nullable = false)
     private Species species;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "color", nullable = false)
+    private Color color;
 
-    //@OneToMany(fetch = FetchType.LAZY, mappedBy = "pet")
-    //private Set<Color> color = new HashSet<Color>();
 
     @Column(name = "price", nullable = false)
     private float price;
@@ -27,6 +28,13 @@ public class Pet {
     @Column(name = "name")
     private String name;
 
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
 
     public int getId() {
         return id;

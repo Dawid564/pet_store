@@ -1,8 +1,6 @@
 package com.pet_shop.domain;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "species", catalog = "petstore", uniqueConstraints = @UniqueConstraint(columnNames = {"id", "species"}))
@@ -15,9 +13,6 @@ public class Species {
 
     @Column(name = "species")
     private String species;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "species")
-    private Set<Pet> pet = new HashSet<Pet>(0);
 
     public int getId() {
         return id;
