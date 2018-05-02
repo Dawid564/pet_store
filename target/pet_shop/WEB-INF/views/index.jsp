@@ -1,5 +1,10 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+
+<form action="/store">
+    <input value="Go to the Store" type="submit">
+</form>
+
+
 </body>
 </html>

@@ -1,8 +1,6 @@
 package com.pet_shop.domain;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "pet", catalog = "petstore", uniqueConstraints = @UniqueConstraint(columnNames = {"id"}))
