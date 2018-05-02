@@ -10,7 +10,7 @@ public class Init extends AbstractAnnotationConfigDispatcherServletInitializer{
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] {WebConfig.class};
+        return new Class[] {WebConfig.class, DataBaseConfig.class};
     }
 
     @Override

@@ -1,0 +1,62 @@
+package com.pet_shop.domain;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "pet", catalog = "petstore", uniqueConstraints = @UniqueConstraint(columnNames = {"id"}))
+public class Pet {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "species", nullable = false)
+    private Species species;
+
+
+    //@OneToMany(fetch = FetchType.LAZY, mappedBy = "pet")
+    //private Set<Color> color = new HashSet<Color>();
+
+    @Column(name = "price", nullable = false)
+    private float price;
+
+    @Column(name = "name")
+    private String name;
+
+
+    public int getId() {
+        return id;
+    }
+
+    public Species getSpecies() {
+        return species;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setSpecies(Species species) {
+        this.species = species;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
