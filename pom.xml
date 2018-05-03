@@ -16,6 +16,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <encoding>UTF-8</encoding>
+    <!--<spring.version>4.3.5.RELEASE</spring.version> -->
+    <spring.version>5.0.2.RELEASE</spring.version>
   </properties>
 
   <dependencies>
@@ -23,37 +25,37 @@
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
-          <version>4.3.5.RELEASE</version>
+          <version>${spring.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-tx</artifactId>
-          <version>4.3.5.RELEASE</version>
+          <version>${spring.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-core</artifactId>
-          <version>4.3.5.RELEASE</version>
+          <version>${spring.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-orm</artifactId>
-          <version>4.3.5.RELEASE</version>
+          <version>${spring.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-context</artifactId>
-          <version>4.3.5.RELEASE</version>
+          <version>${spring.version}</version>
       </dependency>
 
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-jdbc</artifactId>
-          <version>4.3.5.RELEASE</version>
+          <version>${spring.version}</version>
       </dependency>
 
 
@@ -139,11 +141,16 @@
 
 
 
-      <!-- HIBERNATE -->
+      <!-- HIBERNATE 5.2.17.Final -->
       <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
       <dependency>
           <groupId>org.hibernate</groupId>
           <artifactId>hibernate-core</artifactId>
+          <version>5.2.17.Final</version>
+      </dependency>
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-entitymanager</artifactId>
           <version>5.2.17.Final</version>
       </dependency>
 

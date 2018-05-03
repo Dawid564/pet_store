@@ -11,10 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/store">
+<form action="/store/leave">
     <input value="Leave an animal" type="submit">
 </form>
-<form action="/store">
+<form action="/store/list">
     <input value="List available animals" type="submit">
 </form>
 
