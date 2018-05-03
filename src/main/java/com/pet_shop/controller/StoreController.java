@@ -10,6 +10,8 @@ public class StoreController {
 
     @GetMapping()
     public String test(){
-        return "list";
+        return "shop";
     }
+
+
 }
