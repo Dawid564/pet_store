@@ -64,7 +64,4 @@ public class DataBaseConfig {
         txManager.setSessionFactory(sessionFactory);
         return txManager;
     }
-
-
-
 }
