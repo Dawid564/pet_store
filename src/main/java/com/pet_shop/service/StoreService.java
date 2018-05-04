@@ -1,7 +1,10 @@
 package com.pet_shop.service;
 
 
+import java.util.List;
+import java.util.Map;
+
 public interface StoreService {
 
-    void listAnimal();
+    List<Map<String,String>> listAnimal();
 }
