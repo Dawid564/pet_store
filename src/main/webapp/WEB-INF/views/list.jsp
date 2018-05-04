@@ -14,16 +14,18 @@
 </head>
 <body>
 <table>
-    <select id="food" name="fooditems">
-        <table>
-            <c:forEach items="${foods}" var="food">
-            <tr>
-                <td>${food.key}</td>
-                <td>${food.value}</td>
-            </tr>
-            </c:forEach>
-        </table>
-    </select>
+    <tr>
+        <td>Imie</td>
+        <td>Gatunek</td>
+        <td>kup</td>
+    </tr>
+    <c:forEach items="${animals}" var="animal">
+        <tr>
+            <td>${animal.name}</td>
+            <td>${animal.species}</td>
+            <td>:)</td>
+        </tr>
+    </c:forEach>
 </table>
 </body>
 </html>

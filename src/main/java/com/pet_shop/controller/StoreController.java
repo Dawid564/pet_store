@@ -31,12 +31,7 @@ public class StoreController {
 
     @GetMapping("/list")
     public String list(Model model){
-        //"listAnimal", storeService.listAnimal();
-        Map<String, String> foods = new HashMap<String, String>();
-        foods.put("man", "mango");
-        foods.put("app", "apple");
-        foods.put("gra", "grapes");
-        model.addAttribute("foods", foods);
+        model.addAttribute("animals", storeService.listAnimal());
         return "list";
     }
 }
