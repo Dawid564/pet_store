@@ -1,12 +1,11 @@
 package com.pet_shop.controller;
 
+import com.pet_shop.domain.Pet;
 import com.pet_shop.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -22,8 +21,14 @@ public class StoreController {
     }
 
     @GetMapping("/leave")
-    public String leaveAnimal(){
+    public String leaveAnimal(Model model){
+        model.addAttribute("pet", new Pet());
         return "leaveAnimal";
+    }
+
+    @PostMapping("/leave")
+    public String leaveAnimal(@ModelAttribute Pet pet){
+        return "redirect:/store/leave";
     }
 
     @GetMapping("/list")
