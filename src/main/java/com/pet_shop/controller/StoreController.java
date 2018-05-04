@@ -26,7 +26,7 @@ public class StoreController {
 
     @GetMapping("/list")
     public String list(){
-        storeService.test();
+        storeService.listAnimal();
         return "list";
     }
 }

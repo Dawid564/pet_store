@@ -12,7 +12,7 @@ public class StoreServiceImpl implements StoreService{
     StoreRepo storeRepo;
 
     @Override
-    public void test() {
-        storeRepo.test();
+    public void listAnimal() {
+        storeRepo.listAnimal();
     }
 }

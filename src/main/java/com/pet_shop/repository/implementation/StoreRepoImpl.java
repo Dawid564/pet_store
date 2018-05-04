@@ -25,7 +25,7 @@ public class StoreRepoImpl implements StoreRepo{
     }
 
     @Override
-    public void test() {
+    public void listAnimal() {
         List<Pet> pet;
 
         pet = getCurrentSession().createQuery("from Pet").list();

@@ -66,12 +66,13 @@
           <version>${hibernate.version}</version>
       </dependency>
 
-
+      <!-- MySQL -->
       <dependency>
           <groupId>mysql</groupId>
           <artifactId>mysql-connector-java</artifactId>
           <version>6.0.6</version>
       </dependency>
+
       <!-- servlet api -->
       <dependency>
           <groupId>javax.servlet</groupId>
