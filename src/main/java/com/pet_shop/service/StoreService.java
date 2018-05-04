@@ -7,4 +7,5 @@ import java.util.Map;
 public interface StoreService {
 
     List<Map<String,String>> listAnimal();
+    void removeAnimal(int id);
 }

@@ -18,4 +18,9 @@ public class StoreServiceImpl implements StoreService{
     public List<Map<String,String>> listAnimal() {
         return storeRepo.listAnimal();
     }
+
+    @Override
+    public void removeAnimal(int id) {
+        storeRepo.removeAnimal(id);
+    }
 }

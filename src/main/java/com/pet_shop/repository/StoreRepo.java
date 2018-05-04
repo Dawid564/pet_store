@@ -6,4 +6,5 @@ import java.util.Map;
 public interface StoreRepo {
 
     List<Map<String,String>> listAnimal();
+    void removeAnimal(int id);
 }

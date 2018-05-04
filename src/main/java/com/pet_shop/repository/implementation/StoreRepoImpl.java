@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Query;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +27,7 @@ public class StoreRepoImpl implements StoreRepo{
 
     @Override
     public List<Map<String,String>> listAnimal() {
-        String petQuery = "select new map(a.name as name, b.species as species) from Pet a inner join Species b on b.id = a.species";
+        String petQuery = "select new map(a.name as name, b.species as species, a.id as id) from Pet a inner join Species b on b.id = a.species";
         List<Map<String,String>> petList = getCurrentSession().createQuery(petQuery).list();
 
         /* check if list is not empty
@@ -38,5 +39,14 @@ public class StoreRepoImpl implements StoreRepo{
         }*/
 
         return petList;
+    }
+
+    //remove animal from database by id
+    @Override
+    public void removeAnimal(int id) {
+        Query query = getCurrentSession().createQuery("delete from Pet where id = :id");
+        query.setParameter("id", id);
+        int result = query.executeUpdate();
+        //System.out.println("result of query update " + result);
     }
 }

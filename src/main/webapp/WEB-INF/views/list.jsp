@@ -23,7 +23,11 @@
         <tr>
             <td>${animal.name}</td>
             <td>${animal.species}</td>
-            <td>:)</td>
+            <td>
+                <form action="/store/remove/${animal.id}">
+                    <input value="Buy :)" type="submit">
+                </form>
+            </td>
         </tr>
     </c:forEach>
 </table>
