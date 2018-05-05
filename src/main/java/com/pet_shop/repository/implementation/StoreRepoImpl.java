@@ -54,7 +54,9 @@ public class StoreRepoImpl implements StoreRepo{
 
     @Override
     public void databaseAnimalAdd(Pet pet) {
-
+        pet.setColor(getColorObject());
+        pet.setSpecies(getSpeciesObject());
+        getCurrentSession().save(pet);
 
         /*
         Query petQuery = getCurrentSession().createQuery("insert into Pet (species,color,price,name) values (:species, :color, :price, :name)");
@@ -65,5 +67,17 @@ public class StoreRepoImpl implements StoreRepo{
         System.out.println(petQuery.toString());
         petQuery.executeUpdate();
         */
+    }
+
+    private Color getColorObject(){
+        List<Color> colorList;
+        colorList = getCurrentSession().createQuery("from Color").list();
+        return colorList.get(0);
+    }
+
+    private Species getSpeciesObject(){
+        List<Species> speciesList;
+        speciesList = getCurrentSession().createQuery("from Species").list();
+        return speciesList.get(0);
     }
 }
