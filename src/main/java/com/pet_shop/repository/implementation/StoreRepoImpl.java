@@ -1,6 +1,9 @@
 package com.pet_shop.repository.implementation;
 
 
+import com.pet_shop.domain.Color;
+import com.pet_shop.domain.Pet;
+import com.pet_shop.domain.Species;
 import com.pet_shop.repository.StoreRepo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -46,7 +49,21 @@ public class StoreRepoImpl implements StoreRepo{
     public void removeAnimal(int id) {
         Query query = getCurrentSession().createQuery("delete from Pet where id = :id");
         query.setParameter("id", id);
-        int result = query.executeUpdate();
-        //System.out.println("result of query update " + result);
+        query.executeUpdate();
+    }
+
+    @Override
+    public void databaseAnimalAdd(Pet pet) {
+
+
+        /*
+        Query petQuery = getCurrentSession().createQuery("insert into Pet (species,color,price,name) values (:species, :color, :price, :name)");
+        petQuery.setParameter("species", 1);
+        petQuery.setParameter("color", 0);
+        petQuery.setParameter("price", pet.getPrice());
+        petQuery.setParameter("name", pet.getName());
+        System.out.println(petQuery.toString());
+        petQuery.executeUpdate();
+        */
     }
 }

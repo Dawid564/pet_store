@@ -12,15 +12,15 @@ public class Pet {
     private int id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "species", nullable = false)
+    @JoinColumn(name = "species")
     private Species species;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "color", nullable = false)
+    @JoinColumn(name = "color")
     private Color color;
 
 
-    @Column(name = "price", nullable = false)
+    @Column(name = "price")
     private float price;
 
     @Column(name = "name")

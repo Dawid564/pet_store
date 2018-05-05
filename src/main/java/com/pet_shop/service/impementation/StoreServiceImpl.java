@@ -1,5 +1,6 @@
 package com.pet_shop.service.impementation;
 
+import com.pet_shop.domain.Pet;
 import com.pet_shop.repository.StoreRepo;
 import com.pet_shop.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,10 @@ public class StoreServiceImpl implements StoreService{
     @Override
     public void removeAnimal(int id) {
         storeRepo.removeAnimal(id);
+    }
+
+    @Override
+    public void databaseAnimalAdd(Pet pet) {
+        storeRepo.databaseAnimalAdd(pet);
     }
 }
