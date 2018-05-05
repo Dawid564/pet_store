@@ -26,9 +26,10 @@ public class StoreController {
         return "leaveAnimal";
     }
 
-    @PostMapping("/leave")
-    public String leaveAnimal(@ModelAttribute Pet pet){
-        return "redirect:/store/leave";
+    @PostMapping("/leave/add")
+    public String leaveAnimal(@ModelAttribute("pet") Pet pet){
+        System.out.println("Hello my old friend :) " + pet.getName());
+        return "redirect:/store";
     }
 
     @GetMapping("/list")

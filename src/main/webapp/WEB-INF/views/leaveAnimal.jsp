@@ -12,23 +12,15 @@
     <title>Title</title>
 </head>
 <body>
-<form:form method="post" action="/store/leave" modelAttribute="pet">
+<form:form method="post" action="/store/leave/add" modelAttribute="pet">
     <table>
         <tr>
-            <td><form:label path="name">Pet Name</form:label> </td>
+            <td>Pet Name</td>
             <td><form:input path="name"></form:input></td>
         </tr>
         <tr>
-            <td><form:label path="species">Species</form:label> </td>
-            <td><form:input path="species"></form:input></td>
-        </tr>
-        <tr>
-            <td><form:label path="price">Price</form:label> </td>
+            <td>Pet Name</td>
             <td><form:input path="price"></form:input></td>
-        </tr>
-        <tr>
-            <td><form:label path="color">Color</form:label> </td>
-            <td><form:input path="color"></form:input></td>
         </tr>
         <tr>
             <input type="submit" value="Oddaj zwierzaka">
